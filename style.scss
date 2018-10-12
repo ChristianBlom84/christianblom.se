@@ -14,9 +14,9 @@ html {
     font-size: $font-size-default;
     line-height: 1.5;
     background: {
-        image: url(images/mtfuji.jpg);
+        image: url(../images/mtfuji.jpg);
         size: cover;
-        background-attachment: scroll;
+        attachment: scroll;
         repeat: no-repeat;
     }
 }
@@ -48,6 +48,7 @@ main {
 }
 
 .project {
+    justify-self: center;
     display: flex;
     flex-flow: column nowrap;
     background: linear-gradient(to top, #ffffff 0%,#ccdae5 100%);
