@@ -10,8 +10,9 @@ html {
   line-height: 1.5;
   background-image: url(../images/mtfuji.jpg);
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 body {
@@ -40,10 +41,10 @@ main {
   display: grid;
   -ms-grid-columns: (minmax(200px, 300px))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-gap: 2rem;
 }
 
 .project {
-  justify-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,6 +52,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#ccdae5));
   background: linear-gradient(to top, #ffffff 0%, #ccdae5 100%);
   border-radius: 2%;
@@ -76,5 +80,11 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (min-width: 900px) {
+  html {
+    font-size: 22px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
