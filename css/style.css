@@ -19,21 +19,6 @@ body {
   font-family: "Cabin", sans-serif;
 }
 
-video#bgvid {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: url(images/mtfuji.jpg) no-repeat;
-  background-size: cover;
-}
-
 h1,
 h2,
 h3,
@@ -59,6 +44,9 @@ h2 {
   -ms-grid-columns: (minmax(200px, 300px))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
   grid-gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .project {
