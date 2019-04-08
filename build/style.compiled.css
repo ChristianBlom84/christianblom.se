@@ -1,8 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 html {
   font-size: 18px;
@@ -11,35 +10,32 @@ html {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
-}
+  background-position: center; }
 
 body {
-  font-family: "Cabin", sans-serif;
-}
+  font-family: "Cabin", sans-serif; }
 
 h1,
 h2,
 h3,
 h4 {
   font-family: "Lobster", sans-serif;
-  text-align: center;
-}
+  text-align: center; }
 
 h1 {
-  font-size: 36px;
-}
+  font-size: 36px; }
 
 h2 {
-  font-size: 27px;
-}
+  font-size: 27px; }
 
-main {
+#projects {
+  max-width: calc((300px + 4rem) * 3);
+  margin: auto;
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
   grid-gap: 2rem;
-}
+  justify-content: center; }
 
 .project {
   display: flex;
@@ -47,28 +43,19 @@ main {
   justify-content: space-between;
   background: linear-gradient(to top, #ffffff 0%, #ccdae5 100%);
   border-radius: 2%;
-  padding: 0.5rem;
-}
-
-.project h2,
-.project p {
-  margin: 0 0 0.5rem;
-}
-
-.project img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.project .footnote {
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-}
+  padding: 0.5rem; }
+  .project h2,
+  .project p {
+    margin: 0 0 0.5rem; }
+  .project img {
+    display: block;
+    width: 100%;
+    height: auto; }
+  .project .footnote {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between; }
 
 @media screen and (min-width: 900px) {
   html {
-    font-size: 22px;
-  }
-}
+    font-size: 20px; } }
