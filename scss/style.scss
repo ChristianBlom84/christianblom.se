@@ -3,6 +3,7 @@ $font-headlines: 'Lobster', sans-serif;
 $font-size-default: 18px;
 $font-size-medium: 20px;
 $font-size-footnote: 14px;
+$break-point-large: 900px;
 
 * {
     box-sizing: border-box;
@@ -78,7 +79,7 @@ h2 {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: $breakpoint-large) {
     html {
         font-size: $font-size-medium;
     }
