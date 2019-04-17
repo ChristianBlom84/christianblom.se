@@ -17,7 +17,7 @@ html {
     background: {
         image: url(../images/mtfuji.jpg);
         size: cover;
-        attachment: fixed;
+        attachment: top;
         repeat: no-repeat;
         position: center;
     }
@@ -41,6 +41,11 @@ h1 {
 
 h2 {
     font-size: $font-size-default * 1.5;
+}
+
+header {
+    background: rgba(80%, 85.5%, 89.8%, 0.7);
+    min-height: 250px;
 }
 
 #projects {
