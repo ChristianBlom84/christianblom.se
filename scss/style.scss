@@ -25,6 +25,7 @@ html {
 
 body {
     font-family: $font-body;
+    min-height: 100vh;
 }
 
 h1,
@@ -43,7 +44,7 @@ h2 {
     font-size: $font-size-default * 1.5;
 }
 
-header {
+header, footer {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -113,8 +114,39 @@ header {
     transform: scale(1.06);
 }
 
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 1rem 1rem;
+    box-shadow: white 0 0 10px;
+}
+
+input, button, textarea {
+    padding: 0.3rem;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+button {
+    margin-top: 1rem;
+    background: white;
+}
+
+.contact {
+    background: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (min-width: $breakpoint-large) {
     html {
         font-size: $font-size-medium;
+    }
+
+    form {
+        max-width: 50%;
     }
 }
