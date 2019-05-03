@@ -54,6 +54,14 @@ header {
     min-height: 250px;
     padding: 0.5rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+
+    a {
+        color: #7e7eff;
+
+        :visited {
+            color: #7e7eff;
+        }
+    }
 }
 
 .profile {
