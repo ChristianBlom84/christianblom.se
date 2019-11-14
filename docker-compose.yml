@@ -15,8 +15,6 @@ services:
       image: christianblom.se:1.0
       ports:
         - 4000:80
-      env_file:
-        - ./client/deploy/.env
       networks:
         - internal
         - web
