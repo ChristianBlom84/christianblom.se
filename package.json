@@ -7,7 +7,7 @@
     "watch-scss": "node-sass --watch scss/style.scss css/style.min.css",
     "compile-css": "node-sass scss/style.scss build/style.compiled.css",
     "prefix-css": "postcss build/style.compiled.css --use autoprefixer -o build/style.prefixed.css",
-    "compress-css": "node-sass --output-style compressed build/style.prefixed.css css/style.min.css",
+    "compress-css": "node-sass --output-style compressed build/style.prefixed.css public/css/style.min.css",
     "build-css": "npm-run-all compile-css prefix-css compress-css",
     "build": "npm run build-css"
   },

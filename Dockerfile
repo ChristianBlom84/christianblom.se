@@ -15,7 +15,10 @@ RUN npm run build
 
 FROM nginx:stable-alpine
 
-COPY --from=app-builder /app /usr/share/nginx/html
+RUN rm -rf /etc/nginx/conf.d
+COPY conf /etc/nginx
+
+COPY --from=app-builder /app/public /usr/share/nginx/html
 
 EXPOSE 80
 
