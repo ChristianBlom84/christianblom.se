@@ -1,0 +1,25 @@
+version: '3.5'
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+services:
+    christianblom.se:
+      container_name: 'christianblom.se'
+      build:
+        context: ./
+        dockerfile: ./Dockerfile
+      image: christianblom.se:1.0
+      ports:
+        - 4000:80
+      networks:
+        - internal
+        - web
+      labels:
+        - traefik.backend=christianblom.se
+        - traefik.frontend.rule=Host:christianblom.se,www.christianblom.se
+        - traefik.port=80
+        - traefik.docker.network=web
