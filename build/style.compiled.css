@@ -6,9 +6,9 @@
 html {
   font-size: 18px;
   line-height: 1.5;
-  background-image: url(../images/mtfuji.jpg);
+  background-image: url(../images/mtfuji-blur-sm.jpg);
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: top;
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -28,6 +28,21 @@ h1 {
 h2 {
   font-size: 27px; }
 
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  min-height: 250px;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75); }
+
+.profile {
+  max-width: 100px;
+  border-radius: 50%;
+  margin: 1rem 0; }
+
 #projects {
   max-width: calc((300px + 4rem) * 3);
   margin: auto;
@@ -41,9 +56,11 @@ h2 {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  background: linear-gradient(to top, #ffffff 0%, #ccdae5 100%);
+  background: linear-gradient(to top, #ffffff 25%, #ccdae5 100%);
   border-radius: 2%;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  transition-duration: 0.3s;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
   .project h2,
   .project p {
     margin: 0 0 0.5rem; }
@@ -55,6 +72,10 @@ h2 {
     font-size: 14px;
     display: flex;
     justify-content: space-between; }
+
+.project:hover {
+  border-radius: 0;
+  transform: scale(1.06); }
 
 @media screen and (min-width: 900px) {
   html {
