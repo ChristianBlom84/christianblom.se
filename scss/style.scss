@@ -3,7 +3,8 @@ $font-headlines: 'Lobster', sans-serif;
 $font-size-default: 18px;
 $font-size-medium: 20px;
 $font-size-footnote: 14px;
-$breakpoint-large: 900px;
+$breakpoint-medium: 767px;
+$breakpoint-large: 920px;
 
 * {
     box-sizing: border-box;
@@ -86,15 +87,15 @@ header {
     justify-content: space-between;
     background: linear-gradient(to top, #ffffff 25%,#ccdae5 100%);
     border-radius: 2%;
-    padding: 0.5rem;
+    padding: 0.75rem;
     transition-duration: 0.3s;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    
+
     h2,
     p {
         margin: 0 0 0.5rem;
     }
-    
+
     img {
         display: block;
         width: 100%;
@@ -111,6 +112,51 @@ header {
 .project:hover {
     border-radius: 0;
     transform: scale(1.06);
+}
+
+#project-page {
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+  img {
+    max-width: 500px;
+  }
+
+  &:hover {
+    border-radius: 2%;
+    transform: none;
+  }
+}
+
+.project-body {
+  display: flex;
+  flex-flow: row nowrap;
+  a {
+    width: 45%;
+  }
+
+  div {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+  .project-body {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    a {
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 0.5rem;
+    }
+
+    div {
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (min-width: $breakpoint-large) {
